@@ -1,5 +1,5 @@
 """
-  Capstone Project.  Code written by Joshua Bressman.
+  Capstone Project.  Code written by Joshua Bressman. 
   Fall term, 2018-2019.
 """
 
