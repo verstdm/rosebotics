@@ -1,6 +1,6 @@
 """
   Capstone Project.  Code written by Achintya Gupta.
-  Fall term, 2018-2019.
+  Fall term, 2018-2019
 """
 
 import rosebotics as rb
