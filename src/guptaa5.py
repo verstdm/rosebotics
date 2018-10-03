@@ -39,4 +39,6 @@ def run_test_go_stop():
     print(robot.left_wheel.get_degrees_spun())
 
 
-main()
+#main()
+robot=rb.Snatch3rRobot()
+robot.turn(100,120,'right')
