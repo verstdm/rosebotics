@@ -6,7 +6,7 @@
 
 from ev3dev import ev3
 from enum import Enum
-import time
+import time as t
 
 
 class StopAction(Enum):
@@ -32,17 +32,17 @@ class Snatch3rRobot(object):
         self.right_wheel.stop_spinning(stop_action)
 
     def turn(self,duty_cycle_percent,time,direction):
-        time0=time.time()
+        time0=t.time()
         if direction == 'right':
             self.left_wheel.start_spinning(duty_cycle_percent)
             while True:
-                if (time.time()-time0) == time:
+                if (t.time()-time0) >= time:
                     break
             self.left_wheel.stop_spinning('brake')
         else:
             self.right_wheel.start_spinning(duty_cycle_percent)
             while True:
-                if (time.time()-time0) == time:
+                if (t.time()-time0) >= time:
                     break
             self.right_wheel.stop_spinning('brake')
 
