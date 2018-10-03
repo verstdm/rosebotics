@@ -9,21 +9,22 @@ import time
 
 def main():
     """ Runs tests. """
-    run_tests()
+    n=5
+    run_tests(n)
 
 
-def run_tests():
+def run_tests(n):
     """ Runs various tests. """
-    run_test_go_stop()
+    run_test_go_stop(n)
 
 
-def run_test_go_stop():
+def run_test_go_stop(n):
     """ Tests the   go   and   stop   Snatch3rRobot methods. """
     robot = rb.Snatch3rRobot()
-
-    robot.go(50, 25)
-    time.sleep(2)
-    robot.stop()
+    while True:
+        robot.go(50, -50)
+        if time.time(n):
+            break
 
     print(robot.right_wheel.get_degrees_spun())
     print(robot.left_wheel.get_degrees_spun())
