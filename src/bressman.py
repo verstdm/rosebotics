@@ -23,7 +23,7 @@ def run_test_go_stop(n):
     robot = rb.Snatch3rRobot()
     while True:
         robot.go(50, -50)
-        if time.time(n):
+        if time.time() == time.time() + n:
             break
 
     print(robot.right_wheel.get_degrees_spun())
