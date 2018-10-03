@@ -40,11 +40,12 @@ class Snatch3rRobot(object):
                     break
             self.left_wheel.stop_spinning('brake')
         else:
-            self.left_wheel.start_spinning(duty_cycle_percent)
+            self.right_wheel.start_spinning(duty_cycle_percent)
             while True:
                 if (time.time()-time0) == time:
                     break
-            self.left_wheel.stop_spinning('brake')
+            self.right_wheel.stop_spinning('brake')
+
 
 
 
